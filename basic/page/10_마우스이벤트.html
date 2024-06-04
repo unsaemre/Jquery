@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+
+    <h1>mouse event</h1>
+    <div class="wrap">
+        <section>
+            <button>button 1</button>
+            <p>detail 1</p>
+            <button>button 2</button>
+            <p>detail 2</p>
+        </section>
+
+        <section>
+            <ul id="list_1">
+                <li>detail 1</li>
+                <li>detail 2</li>
+                <li>detail 3</li>
+            </ul>
+
+            <ul id="list_2">
+                <li>detail 1</li>
+                <li>detail 2</li>
+                <li>detail 3</li>
+            </ul>
+        </section>
+
+        <script>
+            //  mouseenter , mouseleave, mouseover, mouseout
+            $('#list_1')
+                .on(`mouseenter`, function(){
+                $(this).css('background', 'orange')
+            })
+                .on(`mouseleave`, function(){
+                $(this).css('background', 'white')
+            })
+
+            $('#list_2')
+                .on(`mouseover`, function(){
+                $(this).css('background', 'red')
+            })
+                .on(`mouseout`, function(){
+                $(this).css('background', 'white')
+            })
+        </script>
+
+        <section>
+            <h3>mousemove</h3>
+            <p>X | <span class="posX"></span></p>
+            <p>Y | <span class="posY"></span></p>
+        </section>
+
+        <script>
+            $(document)
+                .on('mousemove', function(e){
+                    $('.posX').text(e.pageX)
+                    $('.posY').text(e.pageY)
+                })
+        </script>
+
+        <section>
+            <select name="" id="site">
+                <option value="https://google.com">google</option>
+                <option value="https://daum.net" selected>daum</option>
+                <option value="https://naver.com">naver</option>
+            </select>
+
+            <p class="site">hello</p>
+            <p><a href="https://daum.net" class="btn">event</a></p>
+
+        </section>
+
+        <script>
+            $('#site').on('change', function(){
+                $('.site').text($(this).val())
+            })
+
+            $('.btn').on('click', function(e){
+                e.preventDefault()
+            })
+        </script>
+
+    </div>
+
+    <script src="../js/10.js"></script>
+</body>
+</html>

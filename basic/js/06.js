@@ -5,3 +5,18 @@
 
 console.log($('.p1').width());
 console.log($('.p1').innerWidth());
+console.log($('.p1').outerWidth());
+
+$('.p2').outerWidth(100).outerHeight(100)
+
+// 요소의 위치 
+// offset
+console.log($('.box').offset().top);
+console.log($('.box').offset().left);
+console.log($('.box').position().top);
+console.log($('.box').position().left);
+
+// 스크롤바 위치
+$(window).on('scroll', function(){
+    console.log($(window).scrollTop());
+})

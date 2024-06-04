@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        .box {background-color: #eee; width: 200px; padding: 10px; margin: 10px;}
+    </style>
+</head>
+<body>
+
+    <p>
+        <button class="btn1">slideup</button>
+        <button class="btn2">fadein</button>
+    </p>
+
+    <p>
+        <button class="btn3">toggleslide</button>
+    </p>
+
+    <p>
+        <button class="btn4">fadeTo 0.3</button>
+        <button class="btn5">fadeTo 1</button>
+    </p>
+
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sapiente nemo iusto nostrum excepturi dolor nam nisi ipsam dolorem, rerum quo obcaecati odio, maxime officia est, sequi natus quibusdam ea.
+    </div>
+
+    <script>
+        // hide(), fadeout(), slideup()
+        // show(), fadein(), slidedown()
+        // toggle(), fadetoggle(), slidetoggle()
+        // fadeto(opacity)
+
+        $('.btn2').hide()
+        $('.btn1').on('click', function() {
+            $('.box').slideUp(500, 'linear', function() {
+                $('.btn1').hide()
+                $('.btn2').show()
+            })
+        })
+        $('.btn2').on('click', function() {
+            $('.box').fadeIn(500, 'swing', function() {
+                $('.btn2').hide()
+                $('.btn1').show()
+            })
+        })
+
+        $('.btn3').on('click', function() {
+            $('.box').slideToggle()   
+        })
+
+        $('.btn4').on('click', function() {
+            $('.box').fadeTo('fast', 0.3)   
+        })
+        $('.btn5').on('click', function() {
+            $('.box').fadeTo('fast', 1)   
+        })
+
+
+    </script>
+</body>
+</html>
