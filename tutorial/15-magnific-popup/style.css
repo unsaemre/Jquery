@@ -1,0 +1,48 @@
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btns a {
+    background-color: palevioletred;
+    padding: 14px;
+    font-size: 18px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 30px;
+    background-color: gainsboro;
+}
+
+.box {
+    position: fixed;
+    top: 10;
+    left: 10;
+    transform: translate(30%, -50%);
+    width: 500px;
+    padding: 26px;
+    background-color: darkgreen;
+}
+.box img {
+    display: block;
+    margin: 20px 0;
+}
+h3 {
+    margin: 20px 0;
+}
+.single, .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.single img, .gallery img {
+    width: 100%;
+    display: block;
+}

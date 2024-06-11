@@ -1,0 +1,26 @@
+body {
+    padding: 30px;
+}
+
+button {
+    color: #222;
+    padding: 12px 26px;
+    margin-left: 580px;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.list li {
+    height: 200px;
+    background-color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}

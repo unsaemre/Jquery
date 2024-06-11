@@ -1,0 +1,26 @@
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: palevioletred;
+    padding: 18px 24px;
+    font-size: 22px;
+}
+.btn.active {
+    background-color: brown;
+}
+.element-item {
+    margin: 10px;
+    width: 280px;
+    display: inline-block;
+    margin: 0 auto;
+}
+.grid img {
+    display: block;
+    width: 100%;
+}
